@@ -1,0 +1,40 @@
+#!/usr/bin/env bash
+
+# 📘 Help menu
+if [[ "$1" == "--help" ]]; then
+  echo "Usage: $0 <file-with-package-names>"
+  echo ""
+  echo "Installs AUR packages listed in the file."
+  echo "Skips packages that are already installed."
+  echo ""
+  echo "Example:"
+  echo "  $0 aur-packages.txt"
+  exit 0
+fi
+
+# 🛑 Ensure input file exists
+if [[ -z "$1" ]]; then
+  echo "Usage: $0 <file-with-package-names>"
+  echo "Use --help for details."
+  exit 1
+fi
+
+PACKAGE_FILE="$1"
+
+while read -r PACKAGE_NAME; do
+  # ✅ Check if installed
+  if pacman -Q "$PACKAGE_NAME" &>/dev/null; then
+    echo "✅  '$PACKAGE_NAME' is already installed. Skipping."
+    continue
+  fi
+
+  echo "📦 Installing '$PACKAGE_NAME'..."
+  git clone "https://aur.archlinux.org/${PACKAGE_NAME}.git"
+
+  (
+    cd "$PACKAGE_NAME" || exit
+    makepkg -si --noconfirm
+  )
+
+  rm -rf "$PACKAGE_NAME"
+done <"$PACKAGE_FILE"

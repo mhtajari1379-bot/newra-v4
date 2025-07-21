@@ -1,0 +1,2 @@
+hiddify-next-bin
+vazirmatn-fonts
