@@ -31,7 +31,7 @@ services:
 	$(ENABLE) bluetooth.service
 	$(START) bluetooth.service
 
-fish:
+shell:
 	chsh -s /usr/bin/fish
 
 lazy:
