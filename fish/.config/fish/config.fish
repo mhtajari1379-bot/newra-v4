@@ -34,6 +34,12 @@ if status is-interactive
         nvim $argv
     end
 
+    function cmp
+        git add -A
+        git commit -m "$argv"
+        git push
+    end
+
     function cheat
         curl cheat.sh/$argv[1]
     end
