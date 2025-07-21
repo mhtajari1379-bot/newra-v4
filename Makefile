@@ -16,6 +16,12 @@ git:
 	$(GITCONFIG) user.name "mhtajari"
 	$(GITCONFIG) credential.helper store
 	$(GITCONFIG) push.autoSetupRemote true
+	$(GITCONFIG) core.pager delta
+	$(GITCONFIG) interactive.diffFilter "delta --color-only"
+	$(GITCONFIG) delta.navigate true
+	$(GITCONFIG) merge.conflictStyle zdiff3
+	$(GITCONFIG) delta.line-numbers true
+	$(GITCONFIG) delta.side-by-side true
 
 stow: path
 	stow */
