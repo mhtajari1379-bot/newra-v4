@@ -12,8 +12,9 @@ aur: $(AUR)
 	./scripts/.local/bin/aur-helper $(AUR)
 
 git:
-	$(GITCONFIG) user.email "mhtajari@riseup.net"
+	$(GITCONFIG) user.email "mhtajari1379@gmail.com"
 	$(GITCONFIG) user.name "mhtajari"
+	$(GITCONFIG) credential.helper store
 	$(GITCONFIG) alias.cmp '!f() { git add -A && git commit -m "$@" && git push; }; f'
 
 stow: path
