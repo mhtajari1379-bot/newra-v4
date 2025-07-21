@@ -10,7 +10,6 @@ Welcome to my dotfiles repository! This repository contains configuration files 
 * **System Services**: Enable and start essential system services like Bluetooth.
 * **Shell Customization**: Switch to the Fish shell for an enhanced terminal experience.
 * **LazyVim Integration**: Clone and configure LazyVim for Neovim.
-* **Doom Emacs Setup**: Install and sync Doom Emacs for a powerful Emacs configuration.
 * **Meta Tasks**: Perform partial or full setup with single commands.
 
 ## Installation
@@ -99,14 +98,6 @@ Clone and set up LazyVim for Neovim:
 
 ```bash
 just lazy
-```
-
-### Doom
-
-Install and configure Doom Emacs:
-
-```bash
-just doom
 ```
 
 ### Setup
