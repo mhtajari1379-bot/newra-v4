@@ -6,12 +6,12 @@ if status is-interactive
     set -x VISUAL nvim
     set -x MANPAGER 'nvim +Man!'
 
-    function ls
+    function l
         clear; and eza --long --header --icons --git --all $argv
     end
 
-    function cd
-        z $argv; and ls
+    function c
+        z $argv; and l
     end
 
     function grep

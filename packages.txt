@@ -1,6 +1,7 @@
 arch-wiki-docs
 arch-wiki-lite
 atool
+bat
 bluez
 bluez-utils
 dialog
@@ -10,9 +11,11 @@ fd
 firefox
 fish
 fisher
+ghostty
 git
 gitui
 inetutils
+just
 kdeconnect
 lm_sensors
 man-db
@@ -23,6 +26,7 @@ pipewire-pulse
 ripgrep
 rubber
 skim
+starship
 stow
 tar
 telegram-desktop
@@ -33,6 +37,7 @@ tldr
 tree
 tree-sitter-cli
 unzip
+vi
 wget
 wireplumber
 xdg-user-dirs
