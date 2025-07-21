@@ -16,7 +16,6 @@ git:
 	$(GITCONFIG) user.name "mhtajari"
 	$(GITCONFIG) credential.helper store
 	$(GITCONFIG) push.autoSetupRemote true
-	$(GITCONFIG) alias.cmp '!f() { git add -A && git commit -m "$@" && git push; }; f'
 
 stow: path
 	stow */
