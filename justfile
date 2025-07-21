@@ -2,21 +2,22 @@
 # Variables
 # ─────────────────────────────────────────────────────────────────────────────
 
-pkgs_file       := "./packages.txt"
-aur_file        := "./aur-packages.txt"
-aur_helper      := "./scripts/.local/bin/aur-helper"
-git_cfg         := "git config --global"
-git_email       := "mhtajari1379@gmail.com"
-git_name        := "mhtajari"
-fish_shell      := "/usr/bin/fish"
-lazyvim_repo    := "https://github.com/LazyVim/starter"
-nvim_config     := "~/.config/nvim"
-fish_funcs_dir  := "~/.config/fish/functions"
-ghostty_dir     := "~/.config/ghostty"
-local_bin_dir   := "~/.local/bin"
-mk              := "mkdir -p"
-svc_enable      := "sudo systemctl enable"
-svc_start       := "sudo systemctl start"
+pkgs_file        := "./packages.txt"
+aur_file         := "./aur-packages.txt"
+aur_helper       := "./scripts/.local/bin/aur-helper"
+git_cfg          := "git config --global"
+git_email        := "mhtajari1379@gmail.com"
+git_name         := "mhtajari"
+fish_shell       := "/usr/bin/fish"
+lazyvim_repo     := "https://github.com/LazyVim/starter"
+nvim_config      := "~/.config/nvim"
+tmux_config_dir  := "~/.config/tmux"
+fish_funcs_dir   := "~/.config/fish/functions"
+ghostty_dir      := "~/.config/ghostty"
+local_bin_dir    := "~/.local/bin"
+mk               := "mkdir -p"
+svc_enable       := "sudo systemctl enable"
+svc_start        := "sudo systemctl start"
 
 set shell := ["bash", "-cu"]
 
@@ -53,13 +54,14 @@ git:
   {{git_cfg}} delta.side-by-side true
 
 # ─────────────────────────────────────────────────────────────────────────────
-# Dotfiles and paths
+# Dotfiles and stow
 # ─────────────────────────────────────────────────────────────────────────────
 
 path:
   {{mk}} {{fish_funcs_dir}}
   {{mk}} {{ghostty_dir}}
   {{mk}} {{nvim_config}}
+  {{mk}} {{tmux_config_dir}}
   {{mk}} {{local_bin_dir}}
 
 stow: path
