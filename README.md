@@ -9,9 +9,7 @@ Welcome to my dotfiles repository! This repository contains configuration files 
 * **Directory Setup**: Create necessary directories for configuration files and binaries.
 * **System Services**: Enable and start essential system services like Bluetooth.
 * **Shell Customization**: Switch to the Fish shell for an enhanced terminal experience.
-* **LazyVim Integration**: Clone and configure LazyVim for Neovim.
-* **Oh My Tmux Setup**: Install and configure Oh My Tmux using XDG paths.
-* **Meta Tasks**: Perform partial or full setup with single commands.
+* **Meta Tasks**: Automate environment setup.
 
 ## Installation
 
@@ -93,34 +91,12 @@ Switch to the Fish shell:
 just shell
 ```
 
-### LazyVim
-
-Clone and set up LazyVim for Neovim:
-
-```bash
-just lazy
-```
-
-### Oh My Tmux
-
-Install and configure Oh My Tmux in XDG-style:
-
-```bash
-just ohmytmux
-```
-
 ### Setup
 
-Perform a basic setup:
+Run the complete setup sequence:
 
 ```bash
 just setup
-```
-
-Perform a full setup (includes LazyVim & Oh My Tmux):
-
-```bash
-just setup-full
 ```
 
 ## Contributing
