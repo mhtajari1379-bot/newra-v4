@@ -6,11 +6,12 @@ Welcome to my dotfiles repository! This repository contains configuration files 
 
 - **Package Management**: Install essential packages using `pacman` and manage AUR packages with a helper script.
 - **Git Configuration**: Set up global Git settings including `delta` integration for enhanced diffs.
-- **Directory Setup**: Create necessary directories for configuration files and binaries.
+- **Directory Setup**: Create required directories for configuration files and binaries.
 - **System Services**: Enable and start essential system services like Bluetooth.
-- **Shell Customization**: Switch to the Fish shell for an enhanced terminal experience.
+- **Shell Customization**: Switch to the Fish shell for a modern command-line experience.
 - **TPM Installation**: Install and configure Tmux Plugin Manager (TPM).
-- **Meta Tasks**: Perform setup with single command.
+- **Cache Management**: Build and manage cache for tools like `bat`.
+- **Meta Tasks**: Automate full setup with a single command.
 
 ## Installation
 
@@ -28,13 +29,13 @@ To install my dotfiles, follow these steps:
    cd ~/newra-v4
    ```
 
-Make sure `just` is installed and available in your shell path.
+Ensure `just` is installed and available in your shell path.
 
 ## Usage
 
 ### Build
 
-Install essential packages:
+Install essential system packages:
 
 ```bash
 just build
@@ -56,11 +57,11 @@ Set up Git configuration:
 just git
 ```
 
-> ⚠️ Note: Review and edit the Git configuration in the Justfile before running, especially the user name, email, and other global settings.
+> ⚠️ **Note**: Review and edit Git details (name, email, and preferences) inside the Justfile before running this command.
 
 ### Stow
 
-Symlink configuration files:
+Symlink configuration files to appropriate locations:
 
 ```bash
 just stow
@@ -68,13 +69,13 @@ just stow
 
 ### Path
 
-Create required config directories (primarily for use with `just stow`):
+Create required config directories (used primarily by `just stow`):
 
 ```bash
 just path
 ```
 
-> ⚠️ Note: The `path` task is designed to support `just stow` and should not typically be run standalone.
+> ⚠️ **Note**: This task is mainly a prerequisite for `just stow`. Running it directly is uncommon.
 
 ### Services
 
@@ -86,7 +87,7 @@ just services
 
 ### Shell
 
-Switch to the Fish shell:
+Set Fish as your default shell:
 
 ```bash
 just shell
@@ -94,10 +95,18 @@ just shell
 
 ### TPM
 
-Install and configure Tmux Plugin Manager (TPM):
+Install the Tmux Plugin Manager:
 
 ```bash
 just tpm
+```
+
+### Cache
+
+Build local caches for tools like `bat`:
+
+```bash
+just cache
 ```
 
 ### Setup
@@ -110,11 +119,11 @@ just setup
 
 ## Contributing
 
-Suggestions, pull requests, and feedback are welcome. Open an issue if you'd like to improve or modify the setup.
+Pull requests and ideas are welcome! Feel free to open an issue or fork this project if you'd like to improve it.
 
 ## License
 
-This project is released under the MIT License. While no separate `LICENSE` file is included, you're free to use, modify, and distribute the code under MIT terms.
+This project is licensed under the MIT License. Although there's no separate `LICENSE` file, you are free to use, modify, and distribute it under MIT terms.
 
 ---
 

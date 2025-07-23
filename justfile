@@ -8,6 +8,7 @@ git_name         := "mhtajari"
 fish_shell       := "/usr/bin/fish"
 nvim_config      := "~/.config/nvim"
 tmux_config      := "~/.config/tmux"
+yazi_config      := "~/.config/yazi"
 fish_funcs_dir   := "~/.config/fish/functions"
 ghostty_dir      := "~/.config/ghostty"
 local_bin_dir    := "~/.local/bin"
@@ -49,10 +50,15 @@ path:
   {{mk}} {{ghostty_dir}}
   {{mk}} {{nvim_config}}
   {{mk}} {{tmux_config}}
+  {{mk}} {{yazi_config}}
   {{mk}} {{local_bin_dir}}
 
 stow: path
   stow */
+
+# Cache Tools
+cache:
+  bat cache --build
 
 # Services & Shell
 services:
@@ -68,5 +74,5 @@ tpm:
   {{git_clone}} {{tpm_repo}} {{tpm_plugins_path}}
 
 # Meta-Task
-setup: build aur git stow services shell tpm
+setup: build aur git stow services shell cache tpm
   @printf "\n✅ Setup complete!\n"
