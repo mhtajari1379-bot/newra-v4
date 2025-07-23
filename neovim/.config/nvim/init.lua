@@ -5,7 +5,6 @@ local opt = vim.opt
 opt.termguicolors = true
 opt.number = true
 opt.relativenumber = true
-opt.laststatus = 3
 opt.mouse = 'a'
 opt.showmode = false
 opt.clipboard = 'unnamedplus'
