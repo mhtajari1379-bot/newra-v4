@@ -1,19 +1,22 @@
 # Variables
-pkgs_file      := "./packages.txt"
-aur_file       := "./aur-packages.txt"
-aur_helper     := "./scripts/.local/bin/aur-helper"
-git_cfg        := "git config --global"
-git_email      := "mhtajari1379@gmail.com"
-git_name       := "mhtajari"
-fish_shell     := "/usr/bin/fish"
-nvim_config    := "~/.config/nvim"
-tmux_config    := "~/.config/tmux"
-fish_funcs_dir := "~/.config/fish/functions"
-ghostty_dir    := "~/.config/ghostty"
-local_bin_dir  := "~/.local/bin"
-mk             := "mkdir -p"
-svc_enable     := "sudo systemctl enable"
-svc_start      := "sudo systemctl start"
+pkgs_file        := "./packages.txt"
+aur_file         := "./aur-packages.txt"
+aur_helper       := "./scripts/.local/bin/aur-helper"
+git_cfg          := "git config --global"
+git_email        := "mhtajari1379@gmail.com"
+git_name         := "mhtajari"
+fish_shell       := "/usr/bin/fish"
+nvim_config      := "~/.config/nvim"
+tmux_config      := "~/.config/tmux"
+fish_funcs_dir   := "~/.config/fish/functions"
+ghostty_dir      := "~/.config/ghostty"
+local_bin_dir    := "~/.local/bin"
+mk               := "mkdir -p"
+svc_enable       := "sudo systemctl enable"
+svc_start        := "sudo systemctl start"
+git_clone        := "git clone --depth 1 --single-branch"
+tpm_repo         := "https://github.com/tmux-plugins/tpm"
+tpm_plugins_path := "~/.tmux/plugins/tpm"
 
 set shell := ["bash", "-cu"]
 
@@ -59,6 +62,11 @@ services:
 shell:
   chsh -s {{fish_shell}}
 
+# TPM Installation
+
+tpm:
+  {{git_clone}} {{tpm_repo}} {{tpm_plugins_path}}
+
 # Meta-Task
-setup: build aur git stow services shell
+setup: build aur git stow services shell tpm
   @printf "\n✅ Setup complete!\n"

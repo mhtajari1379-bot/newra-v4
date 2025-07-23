@@ -4,12 +4,13 @@ Welcome to my dotfiles repository! This repository contains configuration files 
 
 ## Features
 
-* **Package Management**: Install essential packages using `pacman` and manage AUR packages with a helper script.
-* **Git Configuration**: Set up global Git settings including `delta` integration for enhanced diffs.
-* **Directory Setup**: Create necessary directories for configuration files and binaries.
-* **System Services**: Enable and start essential system services like Bluetooth.
-* **Shell Customization**: Switch to the Fish shell for an enhanced terminal experience.
-* **Meta Tasks**: Automate environment setup.
+- **Package Management**: Install essential packages using `pacman` and manage AUR packages with a helper script.
+- **Git Configuration**: Set up global Git settings including `delta` integration for enhanced diffs.
+- **Directory Setup**: Create necessary directories for configuration files and binaries.
+- **System Services**: Enable and start essential system services like Bluetooth.
+- **Shell Customization**: Switch to the Fish shell for an enhanced terminal experience.
+- **TPM Installation**: Install and configure Tmux Plugin Manager (TPM).
+- **Meta Tasks**: Perform setup with single command.
 
 ## Installation
 
@@ -89,6 +90,14 @@ Switch to the Fish shell:
 
 ```bash
 just shell
+```
+
+### TPM
+
+Install and configure Tmux Plugin Manager (TPM):
+
+```bash
+just tpm
 ```
 
 ### Setup
