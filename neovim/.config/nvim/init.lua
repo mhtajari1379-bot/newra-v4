@@ -1,14 +1,11 @@
--- ━━ Leaders ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 
--- ━━ Alias for vim.opt ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 local opt = vim.opt
-
--- ━━ Display & Behavior ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 opt.termguicolors = true
 opt.number = true
 opt.relativenumber = true
+opt.laststatus = 3
 opt.mouse = 'a'
 opt.showmode = false
 opt.clipboard = 'unnamedplus'
@@ -24,14 +21,11 @@ opt.inccommand = 'split'
 opt.cursorline = true
 opt.scrolloff = 10
 opt.confirm = true
+opt.tabstop = 2
+opt.shiftwidth = 2
+opt.softtabstop = 2
+opt.expandtab = true
 
--- ━━ Indentation ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-opt.tabstop = 2 -- a Tab displays as 2 spaces
-opt.shiftwidth = 2 -- → indentation size
-opt.softtabstop = 2 -- editing behavior
-opt.expandtab = true -- use spaces, not tabs
-
--- ━━ Lazy ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 require 'config.lazy'
 
 -- vim: ts=2 sts=2 sw=2 et
