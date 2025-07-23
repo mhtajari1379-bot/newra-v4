@@ -10,7 +10,10 @@ return {
         dark = 'mocha',
       },
       default_integrations = true,
-      integrations = { noice = true },
+      integrations = {
+        snacks = { enabled = true },
+        noice = true,
+      },
     }
     vim.cmd.colorscheme 'catppuccin'
   end,
