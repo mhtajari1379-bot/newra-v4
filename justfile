@@ -9,6 +9,7 @@ fish_shell       := "/usr/bin/fish"
 nvim_config      := "~/.config/nvim"
 tmux_config      := "~/.config/tmux"
 yazi_config      := "~/.config/yazi"
+bat_config       := "~/.config/bat"
 fish_funcs_dir   := "~/.config/fish/functions"
 ghostty_dir      := "~/.config/ghostty"
 local_bin_dir    := "~/.local/bin"
@@ -51,6 +52,7 @@ path:
   {{mk}} {{nvim_config}}
   {{mk}} {{tmux_config}}
   {{mk}} {{yazi_config}}
+  {{mk}} {{bat_config}}
   {{mk}} {{local_bin_dir}}
 
 stow: path
