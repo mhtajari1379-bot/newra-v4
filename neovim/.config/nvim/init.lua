@@ -1,24 +1,37 @@
+-- ━━ Leaders ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
-vim.opt.termguicolors = true
-vim.o.number = true
-vim.o.relativenumber = true
-vim.o.mouse = 'a'
-vim.o.showmode = false
-vim.o.clipboard = 'unnamedplus'
-vim.o.undofile = true
-vim.o.ignorecase = true
-vim.o.smartcase = true
-vim.o.signcolumn = 'yes'
-vim.o.splitright = true
-vim.o.splitbelow = true
-vim.o.list = true
-vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' }
-vim.o.inccommand = 'split'
-vim.o.cursorline = true
-vim.o.scrolloff = 10
-vim.o.confirm = true
 
-require("config.lazy")
+-- ━━ Alias for vim.opt ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+local opt = vim.opt
+
+-- ━━ Display & Behavior ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+opt.termguicolors = true
+opt.number = true
+opt.relativenumber = true
+opt.mouse = 'a'
+opt.showmode = false
+opt.clipboard = 'unnamedplus'
+opt.undofile = true
+opt.ignorecase = true
+opt.smartcase = true
+opt.signcolumn = 'yes'
+opt.splitright = true
+opt.splitbelow = true
+opt.list = true
+opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' }
+opt.inccommand = 'split'
+opt.cursorline = true
+opt.scrolloff = 10
+opt.confirm = true
+
+-- ━━ Indentation ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+opt.tabstop = 2 -- a Tab displays as 2 spaces
+opt.shiftwidth = 2 -- → indentation size
+opt.softtabstop = 2 -- editing behavior
+opt.expandtab = true -- use spaces, not tabs
+
+-- ━━ Lazy ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+require 'config.lazy'
 
 -- vim: ts=2 sts=2 sw=2 et
