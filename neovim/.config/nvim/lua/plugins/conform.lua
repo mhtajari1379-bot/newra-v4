@@ -7,6 +7,14 @@ return {
     },
     formatters_by_ft = {
       lua = { 'stylua' },
+      bash = { 'shfmt' },
+      latex = { 'latexindent' },
+      markdown = { 'prettier' },
+      javascript = { 'prettier' },
+      html = { 'prettier' },
+      css = { 'prettier' },
+      typescript = { 'prettier' },
+      json = { 'jq' },
     },
   },
 }
