@@ -61,6 +61,13 @@ return {
       desc = 'File Explorer',
     },
     {
+      '<leader>g',
+      function()
+        Snacks.lazygit()
+      end,
+      desc = 'Lazygit',
+    },
+    {
       'gd',
       function()
         Snacks.picker.lsp_definitions()
