@@ -20,7 +20,6 @@ return {
     scroll = { enabled = true },
     statuscolumn = { enabled = true },
     terminal = { enabled = true },
-    toggle = { enabled = true },
     win = { enabled = true },
     words = { enabled = true },
   },
@@ -66,6 +65,21 @@ return {
         Snacks.lazygit()
       end,
       desc = 'Lazygit',
+    },
+    {
+      '<C-_>',
+      function()
+        Snacks.terminal.toggle()
+      end,
+      desc = 'Toggle Terminal',
+      mode = { 'n', 'i', 't' },
+    },
+    {
+      '<leader>s',
+      function()
+        Snacks.scratch()
+      end,
+      desc = 'Scratch Buffer',
     },
     {
       'gd',
