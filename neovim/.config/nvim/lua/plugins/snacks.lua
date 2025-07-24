@@ -13,7 +13,7 @@ return {
     input = { enabled = true },
     lazygit = { enabled = true },
     picker = { enabled = true },
-    -- notifier = { enabled = true },
+    notifier = { enabled = true },
     quickfile = { enabled = true },
     scope = { enabled = true },
     scratch = { enabled = true },
@@ -26,11 +26,61 @@ return {
   },
   keys = {
     {
+      '<leader><space>',
+      function()
+        Snacks.picker.smart()
+      end,
+      desc = 'Smart Find Files',
+    },
+    {
+      '<leader><Tab>',
+      function()
+        Snacks.picker.buffers()
+      end,
+      desc = 'Buffers',
+    },
+    {
+      '<leader>:',
+      function()
+        Snacks.picker.command_history()
+      end,
+      desc = 'Command History',
+    },
+    {
+      '<leader>n',
+      function()
+        Snacks.picker.notifications()
+      end,
+      desc = 'Notification History',
+    },
+    {
       '<leader>e',
       function()
         Snacks.explorer()
       end,
       desc = 'File Explorer',
+    },
+    {
+      'gd',
+      function()
+        Snacks.picker.lsp_definitions()
+      end,
+      desc = 'Goto Definition',
+    },
+    {
+      'gD',
+      function()
+        Snacks.picker.lsp_declarations()
+      end,
+      desc = 'Goto Declaration',
+    },
+    {
+      'gr',
+      function()
+        Snacks.picker.lsp_references()
+      end,
+      nowait = true,
+      desc = 'References',
     },
   },
 }
