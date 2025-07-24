@@ -25,6 +25,18 @@ opt.shiftwidth = 2
 opt.softtabstop = 2
 opt.expandtab = true
 
+vim.cmd [[
+  augroup RestoreCursor
+    autocmd!
+    autocmd BufReadPre * autocmd FileType <buffer> ++once
+      \ let s:line = line("'\"")
+      \ | if s:line >= 1 && s:line <= line("$") && &filetype !~# 'commit'
+      \      && index(['xxd', 'gitrebase'], &filetype) == -1
+      \ |   execute "normal! g`\""
+      \ | endif
+  augroup END
+]]
+
 require 'config.lazy'
 
 -- vim: ts=2 sts=2 sw=2 et

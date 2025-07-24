@@ -10,7 +10,6 @@ Welcome to my dotfiles repository! This repository contains configuration files 
 - **System Services**: Enable and start essential system services like Bluetooth.
 - **Shell Customization**: Switch to the Fish shell for a modern command-line experience.
 - **TPM Installation**: Install and configure Tmux Plugin Manager (TPM).
-- **Cache Management**: Build and manage cache for tools like `bat`.
 - **Meta Tasks**: Automate full setup with a single command.
 
 ## Installation
@@ -99,14 +98,6 @@ Install the Tmux Plugin Manager:
 
 ```bash
 just tpm
-```
-
-### Cache
-
-Build local caches for tools like `bat`:
-
-```bash
-just cache
 ```
 
 ### Setup

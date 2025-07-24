@@ -9,9 +9,7 @@ fish_shell       := "/usr/bin/fish"
 nvim_config      := "~/.config/nvim"
 tmux_config      := "~/.config/tmux"
 yazi_config      := "~/.config/yazi"
-bat_config       := "~/.config/bat"
 fish_funcs_dir   := "~/.config/fish/functions"
-ghostty_dir      := "~/.config/ghostty"
 local_bin_dir    := "~/.local/bin"
 mk               := "mkdir -p"
 svc_enable       := "sudo systemctl enable"
@@ -48,19 +46,13 @@ git:
 # Dotfiles & Stow
 path:
   {{mk}} {{fish_funcs_dir}}
-  {{mk}} {{ghostty_dir}}
   {{mk}} {{nvim_config}}
   {{mk}} {{tmux_config}}
   {{mk}} {{yazi_config}}
-  {{mk}} {{bat_config}}
   {{mk}} {{local_bin_dir}}
 
 stow: path
   stow */
-
-# Cache Tools
-cache:
-  bat cache --build
 
 # Services & Shell
 services:
@@ -76,5 +68,5 @@ tpm:
   {{git_clone}} {{tpm_repo}} {{tpm_plugins_path}}
 
 # Meta-Task
-setup: build aur git stow services shell cache tpm
+setup: build aur git stow services shell tpm
   @printf "\n✅ Setup complete!\n"
