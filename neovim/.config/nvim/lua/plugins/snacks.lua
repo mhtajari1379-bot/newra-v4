@@ -39,6 +39,13 @@ return {
       desc = 'Buffers',
     },
     {
+      '<leader>/',
+      function()
+        Snacks.picker.grep()
+      end,
+      desc = 'Grep',
+    },
+    {
       '<leader>:',
       function()
         Snacks.picker.command_history()
@@ -78,6 +85,7 @@ return {
       '<leader>s',
       function()
         Snacks.scratch()
+        vim.cmd 'startinsert'
       end,
       desc = 'Scratch Buffer',
     },
