@@ -11,7 +11,10 @@ return {
       },
       default_integrations = true,
       integrations = {
-        snacks = { enabled = true },
+        snacks = {
+          enabled = true,
+          picker_style = 'nvchad',
+        },
         noice = true,
       },
     }
