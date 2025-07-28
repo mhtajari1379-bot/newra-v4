@@ -82,12 +82,12 @@ return {
       mode = { 'n', 'i', 't' },
     },
     {
-      '<leader>s',
+      '<C-s>',
       function()
         Snacks.scratch()
-        vim.cmd 'startinsert'
       end,
-      desc = 'Scratch Buffer',
+      desc = ' Toggle Scratch Buffer',
+      mode = { 'n', 'i', 't' },
     },
     {
       'gd',
