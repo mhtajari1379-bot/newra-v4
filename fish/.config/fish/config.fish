@@ -38,6 +38,10 @@ if status is-interactive
         tmux $argv
     end
 
+    function q
+        exit
+    end
+
     function cmp
         git add -A
         git commit -m "$argv"
