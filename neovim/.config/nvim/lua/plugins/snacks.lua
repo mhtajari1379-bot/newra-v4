@@ -87,7 +87,7 @@ return {
         Snacks.scratch()
       end,
       desc = ' Toggle Scratch Buffer',
-      mode = { 'n', 'i', 't' },
+      mode = { 'n', 'i' },
     },
     {
       'gd',
