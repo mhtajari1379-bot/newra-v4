@@ -34,6 +34,10 @@ if status is-interactive
         nvim $argv
     end
 
+    function t
+        tmux $argv
+    end
+
     function cmp
         git add -A
         git commit -m "$argv"
