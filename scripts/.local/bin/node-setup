@@ -8,6 +8,7 @@ function show_help
     echo "  --browser-sync    Install browser-sync globally (requires npm & nvm)"
     echo "  --live-server     Install live-server globally (requires npm & nvm)"
     echo "  --typescript      Install typescript globally (requires npm & nvm)"
+    echo "  --angular-cli     Install Angular CLI globally (requires npm & nvm)"
 end
 
 function check_npm
@@ -46,7 +47,8 @@ for arg in $argv
         case --set-default
             if check_nvm
                 nvm install latest
-                set -U nvm_default_version latest
+                echo "ℹ️ To make 'latest' the default Node version permanently, run:"
+                echo "   set -U nvm_default_version latest"
                 echo "✅ Set latest Node version as default"
             end
 
@@ -77,6 +79,16 @@ for arg in $argv
                     echo "✅ Installed typescript"
                 else
                     echo "✅ typescript already installed"
+                end
+            end
+
+        case --angular-cli
+            if check_nvm && check_npm
+                if not type -q ng
+                    npm install -g @angular/cli
+                    echo "✅ Installed Angular CLI"
+                else
+                    echo "✅ Angular CLI already installed"
                 end
             end
 
