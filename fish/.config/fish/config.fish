@@ -22,8 +22,8 @@ if status is-interactive
         command diff --color=auto $argv
     end
 
-    function update
-        sudo pacman -Syu $argv
+    function u
+        paru $argv
     end
 
     function f
@@ -40,6 +40,14 @@ if status is-interactive
 
     function q
         exit
+    end
+
+    function lzd
+        lazydocker
+    end
+
+    function lzg
+        lazygit
     end
 
     function cmp

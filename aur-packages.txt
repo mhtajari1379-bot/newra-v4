@@ -1,2 +1,4 @@
 hiddify-next-bin
+lazydocker
+paru
 vazirmatn-fonts
