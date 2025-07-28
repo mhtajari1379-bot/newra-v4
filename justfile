@@ -37,6 +37,7 @@ git:
     {{ git_cfg }} user.name {{ git_name }}
     {{ git_cfg }} credential.helper store
     {{ git_cfg }} push.autoSetupRemote true
+    {{ git_cfg }} init.defaultBranch main
     {{ git_cfg }} core.pager delta
     {{ git_cfg }} interactive.diffFilter "delta --color-only"
     {{ git_cfg }} delta.navigate true
