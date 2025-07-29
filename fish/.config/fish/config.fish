@@ -42,12 +42,20 @@ if status is-interactive
         exit
     end
 
-    function lzd
-        lazydocker
+    function gs
+        git status
+    end
+
+    function gd
+        git diff
     end
 
     function lzg
         lazygit
+    end
+
+    function lzd
+        lazydocker
     end
 
     function cmp
