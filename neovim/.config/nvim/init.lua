@@ -28,12 +28,13 @@ opt.expandtab = true
 local map = vim.keymap.set
 local opts = { silent = true, noremap = true }
 local modes = { 'n', 'i' }
-map(modes, '<C-s>', '<Esc>:w<CR>', vim.tbl_extend('force', opts, { desc = 'Save Current Buffer' }))
-map(modes, '<C-q>', '<Esc>:wq<CR>', vim.tbl_extend('force', opts, { desc = 'Save And Quit Buffer' }))
-map('n', '<leader>bd', ':bd<CR>', vim.tbl_extend('force', opts, { desc = 'Delete Current Buffer' }))
-map('n', '<leader>wc', '<C-w>c', vim.tbl_extend('force', opts, { desc = 'Close Current Window' }))
-map('n', '<leader>|', ':vsplit<CR>', vim.tbl_extend('force', opts, { desc = 'Vertical Split' }))
-map('n', '<leader>_', ':split<CR>', vim.tbl_extend('force', opts, { desc = 'Horizontal Split' }))
+local extend = vim.tbl_extend
+map(modes, '<C-s>', '<Esc>:w<CR>', extend('force', opts, { desc = 'Save Current Buffer' }))
+map(modes, '<C-q>', '<Esc>:wq<CR>', extend('force', opts, { desc = 'Save And Quit Buffer' }))
+map('n', '<leader>bd', ':bd<CR>', extend('force', opts, { desc = 'Delete Current Buffer' }))
+map('n', '<leader>wc', '<C-w>c', extend('force', opts, { desc = 'Close Current Window' }))
+map('n', '<leader>|', ':vsplit<CR>', extend('force', opts, { desc = 'Vertical Split' }))
+map('n', '<leader>_', ':split<CR>', extend('force', opts, { desc = 'Horizontal Split' }))
 
 vim.cmd [[
   augroup RestoreCursor
