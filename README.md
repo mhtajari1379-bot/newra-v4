@@ -2,6 +2,21 @@
 
 Welcome to my dotfiles repository! This repository contains configuration files and scripts to set up and customize my development environment using [`just`](https://github.com/casey/just) task automation.
 
+* [Features](#features)
+* [Installation](#installation)
+* [Usage](#usage)
+  * [Build](#build)
+  * [AUR](#aur)
+  * [Git](#git)
+  * [Stow](#stow)
+  * [Path](#path)
+  * [Services](#services)
+  * [Shell](#shell)
+  * [TPM](#tpm)
+  * [Setup](#setup)
+* [Contributing](#contributing)
+* [License](#license)
+
 ## Features
 
 - **Package Management**: Install essential packages using `pacman` and manage AUR packages with a helper script.

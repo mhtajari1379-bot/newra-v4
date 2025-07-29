@@ -24,6 +24,8 @@ opt.tabstop = 2
 opt.shiftwidth = 2
 opt.softtabstop = 2
 opt.expandtab = true
+vim.opt.conceallevel = 2
+vim.cmd [[filetype plugin indent on]]
 
 local map = vim.keymap.set
 local opts = { silent = true, noremap = true }
