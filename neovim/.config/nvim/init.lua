@@ -26,8 +26,10 @@ opt.softtabstop = 2
 opt.expandtab = true
 
 local map = vim.keymap.set
-map('n', '<leader>s', '<Esc>:w<CR>', { silent = true, noremap = true, desc = 'Save Current Buffer' })
-map('n', '<leader>q', '<Esc>:wq<CR>', { silent = true, noremap = true, desc = 'Save And Quit Buffer' })
+local opts = { silent = true, noremap = true }
+local modes = { 'n', 'i' }
+map(modes, '<C-s>', '<Esc>:w<CR>', opts)
+map(modes, '<C-q>', '<Esc>:wq<CR>', opts)
 
 vim.cmd [[
   augroup RestoreCursor

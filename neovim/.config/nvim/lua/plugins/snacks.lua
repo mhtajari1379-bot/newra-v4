@@ -82,12 +82,11 @@ return {
       mode = { 'n', 'i', 't' },
     },
     {
-      '<C-s>',
+      '<leader>,',
       function()
         Snacks.scratch()
       end,
       desc = ' Toggle Scratch Buffer',
-      mode = { 'n', 'i' },
     },
     {
       'gd',
