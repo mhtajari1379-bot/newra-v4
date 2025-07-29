@@ -16,6 +16,9 @@ return {
           picker_style = 'nvchad',
         },
         noice = true,
+        which_key = true,
+        headlines = true,
+        lsp_trouble = true,
       },
     }
     vim.cmd.colorscheme 'catppuccin'
