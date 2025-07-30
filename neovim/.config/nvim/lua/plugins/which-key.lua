@@ -16,6 +16,7 @@ return {
     wk.add {
       { '<leader>b', group = 'Buffer' },
       { '<leader>w', group = 'Window' },
+      { '<leader>g', group = 'Git' },
     }
   end,
 }

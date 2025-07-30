@@ -67,7 +67,7 @@ return {
       desc = 'File Explorer',
     },
     {
-      '<leader>g',
+      '<leader>gg',
       function()
         Snacks.lazygit()
       end,
