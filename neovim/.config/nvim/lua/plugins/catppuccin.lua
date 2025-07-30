@@ -21,7 +21,4 @@ return {
       lsp_trouble = true,
     },
   },
-  config = function()
-    vim.cmd.colorscheme 'catppuccin'
-  end,
 }
