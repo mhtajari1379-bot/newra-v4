@@ -6,5 +6,8 @@ return {
       noremap = true,
       desc = 'Git Preview',
     }),
+    preview_config = {
+      border = 'rounded',
+    },
   },
 }
