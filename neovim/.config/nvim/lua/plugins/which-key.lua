@@ -1,7 +1,16 @@
 return {
   'folke/which-key.nvim',
   event = 'VeryLazy',
-  opts = {},
+  opts = {
+    preset = 'helix',
+    defaults = {},
+    spec = {
+      { '<leader>b', group = 'Buffer' },
+      { '<leader>w', group = 'Window' },
+      { '<leader>g', group = 'Git' },
+      { '<leader>s', group = 'Session' },
+    },
+  },
   keys = {
     {
       '<leader>?',
@@ -11,12 +20,4 @@ return {
       desc = 'Buffer Local Keymaps (which-key)',
     },
   },
-  config = function()
-    local wk = require 'which-key'
-    wk.add {
-      { '<leader>b', group = 'Buffer' },
-      { '<leader>w', group = 'Window' },
-      { '<leader>g', group = 'Git' },
-    }
-  end,
 }

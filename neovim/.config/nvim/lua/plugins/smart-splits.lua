@@ -1,13 +1,15 @@
 return {
   'mrjones2014/smart-splits.nvim',
   config = function()
-    vim.keymap.set('n', '<A-h>', require('smart-splits').resize_left)
-    vim.keymap.set('n', '<A-j>', require('smart-splits').resize_down)
-    vim.keymap.set('n', '<A-k>', require('smart-splits').resize_up)
-    vim.keymap.set('n', '<A-l>', require('smart-splits').resize_right)
-    vim.keymap.set('n', '<C-h>', require('smart-splits').move_cursor_left)
-    vim.keymap.set('n', '<C-j>', require('smart-splits').move_cursor_down)
-    vim.keymap.set('n', '<C-k>', require('smart-splits').move_cursor_up)
-    vim.keymap.set('n', '<C-l>', require('smart-splits').move_cursor_right)
+    local map = vim.keymap.set
+    local ss = require 'smart-splits'
+    map('n', '<A-h>', ss.resize_left)
+    map('n', '<A-j>', ss.resize_down)
+    map('n', '<A-k>', ss.resize_up)
+    map('n', '<A-l>', ss.resize_right)
+    map('n', '<C-h>', ss.move_cursor_left)
+    map('n', '<C-j>', ss.move_cursor_down)
+    map('n', '<C-k>', ss.move_cursor_up)
+    map('n', '<C-l>', ss.move_cursor_right)
   end,
 }
