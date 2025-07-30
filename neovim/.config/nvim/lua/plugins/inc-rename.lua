@@ -6,6 +6,6 @@ return {
     local map = vim.keymap.set
     local opts = { silent = true, noremap = true }
     local extend = vim.tbl_extend
-    map('n', '<leader>r', ':IncRename ', extend('force', opts, { desc = 'Inc Rename' }))
+    map('n', '<leader>r', '<cmd>IncRename ', extend('force', opts, { desc = 'Inc Rename' }))
   end,
 }
